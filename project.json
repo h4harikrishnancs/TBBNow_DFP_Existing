@@ -1,18 +1,30 @@
 {
-  "name": "t",
-  "description": "Blank Process",
+  "name": "UC002_Deduction_File_Processor",
+  "description": "Generate Census files based on the deduction file",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.12.3]",
-    "UiPath.Mail.Activities": "[1.15.1]",
-    "UiPath.System.Activities": "[22.4.1]",
-    "UiPath.UIAutomation.Activities": "[22.4.4]"
+    "UiPath.Database.Activities": "[1.4.0]",
+    "UiPath.DataService.Activities": "[21.1.2]",
+    "UiPath.Excel.Activities": "[2.9.5]",
+    "UiPath.Form.Activities": "[1.2.1-preview]",
+    "UiPath.Mail.Activities": "[1.9.5]",
+    "UiPath.PDF.Activities": "[3.3.0]",
+    "UiPath.System.Activities": "[20.10.4]",
+    "UiPath.UIAutomation.Activities": "[20.10.9]",
+    "UiPath.WebAPI.Activities": "[1.7.0]"
   },
   "webServices": [],
-  "entitiesStores": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "tenantName": "dev",
+      "namespace": "DAS_Elysianhc_Census_File_Generator",
+      "uniqueReference": "PCmwSuQwB+PWCTmRqUgF4QQWhrJK0go8q1G4gPfa/OM="
+    }
+  ],
   "schemaVersion": "4.0",
-  "studioVersion": "22.4.1.0",
-  "projectVersion": "1.0.0",
+  "studioVersion": "19.10.4.0",
+  "projectVersion": "1.0.37",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -27,7 +39,7 @@
     "executionType": "Workflow",
     "readyForPiP": false,
     "startsInPiP": false,
-    "mustRestoreAllDependencies": true
+    "mustRestoreAllDependencies": false
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -40,13 +52,13 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "modernBehavior": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [
     {
       "filePath": "Main.xaml",
-      "uniqueId": "a1b06c80-f0a4-41c1-8616-9e5d3efe4f20",
+      "uniqueId": "ae21db29-08b3-4009-a5f4-41b387ce8c6e",
       "input": [],
       "output": []
     }
